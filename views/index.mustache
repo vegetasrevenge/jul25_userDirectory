@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>User Directory</title>
-    <link rel="Stylesheet" href="styles.css"/>
+    <link rel="Stylesheet" href="/styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
@@ -11,6 +11,7 @@
     <div class="container">
 
       {{#users}}
+        <a href="/details/{{id}}">
         {{ #job }}
         <div class="profile employed" >
         {{ /job }}
@@ -20,7 +21,6 @@
           <img class="image" src="{{avatar}}"/>
           <div class="info">
             <span>{{name}}</span>
-
             <span>
               {{#job}}
                 {{job}}
@@ -34,6 +34,7 @@
             <span>{{company}}</span>
           </div>
         </div>
+        </a>
       {{/users}}
     </div>
 
